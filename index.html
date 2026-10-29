@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Tek Hôtel Lakota — Appart'Hôtel & Location Meublée d'Exception</title>
+  <meta name="description" content="Découvrez Tek Hôtel Lakota, votre appart'hôtel de haut standing à Lakota, Côte d'Ivoire. Studios, appartements et suites climatisés et ventilés tout confort avec mini-bar et service hôtelier premium.">
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Tek Hôtel Lakota — Appart'Hôtel & Location Meublée d'Exception"/>
+  <meta property="og:description" content="Découvrez Tek Hôtel Lakota, votre appart'hôtel de haut standing à Lakota, Côte d'Ivoire. Studios, appartements et suites climatisés et ventilés tout confort avec mini-bar et service hôtelier premium."/>
+  <meta property="og:image" content="./WhatsApp Image 2026-08-15 at 09.59.55.jpeg"/>
+  <link rel="icon" type="image/jpeg" href="./WhatsApp Image 2026-08-15 at 09.59.55.jpeg">
+
+  <!-- Polices Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet"/>
+  <!-- Icônes Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Feuille de styles locale autonome (Tailwind compilé + Design System + SPA) -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+
+  <!-- ========================================== -->
+  <!-- HEADER OFFICIEL STITCH                     -->
+  <!-- ========================================== -->
+  <header class="fixed top-0 w-full z-50 bg-surface-white/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container">
+    <div class="h-20 max-w-container-max mx-auto px-gutter flex items-center justify-between">
+      
+      <!-- Brand & Logo Médaillon -->
+      <a href="#accueil" class="flex items-center gap-3">
+        <img alt="Logo Tek Hôtel Lakota" class="h-11 w-11 rounded-full object-cover border border-accent-gold/40 shadow-sm" src="./WhatsApp Image 2026-08-15 at 09.59.55.jpeg"/>
+        <div class="flex flex-col">
+          <span class="font-headline-md text-deep-navy text-xl leading-none">Tek Hôtel</span>
+          <span class="text-[11px] font-label-md text-accent-gold uppercase tracking-wider mt-0.5">Lakota</span>
+        </div>
+      </a>
+
+      <!-- Navigation Desktop -->
+      <nav class="hidden lg:flex items-center gap-base">
+        <a class="px-4 py-2 font-label-md transition-colors text-primary font-bold active" data-path="accueil" href="#accueil">Accueil</a>
+        <a class="px-4 py-2 font-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="nos-logements" href="#nos-logements">Nos logements</a>
+        <a class="px-4 py-2 font-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="qui-sommes-nous" href="#qui-sommes-nous">Qui sommes-nous</a>
+        <a class="px-4 py-2 font-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="nos-services" href="#nos-services">Nos services</a>
+        <a class="px-4 py-2 font-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#contact">Contact</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a class="bg-deep-navy text-on-primary font-label-md px-7 py-3 rounded-lg hover:bg-primary-container transition-all shadow-md inline-flex items-center gap-2" href="#nos-logements">
+          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+          <span>Réserver</span>
+        </a>
+
+        <!-- Bouton menu mobile -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-deep-navy hover:bg-surface-container transition-colors" aria-label="Menu">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface-white border-b border-surface-container px-6 py-4 space-y-3 shadow-xl">
+      <a class="block font-label-md text-primary font-bold py-2" data-path="accueil" href="#accueil">Accueil</a>
+      <a class="block font-label-md text-on-surface-variant hover:text-primary py-2" data-path="nos-logements" href="#nos-logements">Nos logements</a>
+      <a class="block font-label-md text-on-surface-variant hover:text-primary py-2" data-path="qui-sommes-nous" href="#qui-sommes-nous">Qui sommes-nous</a>
+      <a class="block font-label-md text-on-surface-variant hover:text-primary py-2" data-path="nos-services" href="#nos-services">Nos services</a>
+      <a class="block font-label-md text-on-surface-variant hover:text-primary py-2" data-path="contact" href="#contact">Contact</a>
+      <a class="block font-label-md text-on-surface-variant hover:text-primary py-2" data-path="mentions-legales" href="#mentions-legales">Mentions légales</a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTAINER (SECTIONS SPA)             -->
+  <!-- ========================================== -->
+  <main class="w-full pt-20 bg-surface">
+
+    <!-- ========================================== -->
+    <!-- SECTION 1 : ACCUEIL                        -->
+    <!-- ========================================== -->
+    <section id="section-accueil" class="spa-section active">
+      <div class="flex flex-col w-full font-body-md text-on-surface">
+        
+        <!-- Hero Section with Overlapping Search -->
+        <div class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center -mt-20">
+          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&q=90')">
+            <div class="absolute inset-0 bg-gradient-to-r from-deep-navy/90 via-deep-navy/70 to-deep-navy/40"></div>
+          </div>
+          
+          <div class="relative z-10 w-full max-w-container-max mx-auto px-gutter pt-20">
+            <div class="max-w-2xl text-on-primary">
+              <span class="inline-block px-4 py-1.5 mb-6 bg-accent-gold/20 backdrop-blur-md rounded-full font-label-md text-label-md uppercase tracking-wider text-surface-white">Bienvenue à Lakota</span>
+              <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">L'Excellence du Confort <br/><span class="text-accent-gold">Comme à la Maison</span></h1>
+              <p class="font-body-lg text-body-lg mb-10 text-surface-container-high opacity-90 max-w-xl">
+                Découvrez nos appartements et chambres meublés de haut standing à Lakota. Chambres climatisées ou ventilées avec mini-bar et prestations hôtelières complètes.
+              </p>
+              <a class="inline-flex items-center gap-2 bg-accent-gold text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-surface-white hover:text-deep-navy transition-all shadow-lg transform hover:-translate-y-1" href="#nos-logements">
+                <span>Voir nos logements</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Floating Search Bar -->
+          <div class="absolute -bottom-16 left-0 right-0 z-20 px-gutter">
+            <div class="max-w-container-max mx-auto bg-surface-white rounded-xl shadow-[0_20px_40px_rgba(30,42,110,0.12)] p-6 md:p-4 flex flex-col md:flex-row items-center gap-4 md:gap-0 border border-surface-container">
+              <div class="w-full md:w-1/4 px-4 py-2 border-r-0 md:border-r border-surface-container-high flex flex-col gap-1">
+                <label class="font-label-md text-label-md text-text-muted uppercase">Type de logement</label>
+                <div class="relative">
+                  <select id="hero-filter-type" class="w-full bg-transparent font-headline-md text-body-lg text-deep-navy appearance-none focus:outline-none cursor-pointer">
+                    <option value="">Tous les types</option>
+                    <option value="Studio">Studio</option>
+                    <option value="T2">Appartement T2</option>
+                    <option value="T3">Appartement T3</option>
+                    <option value="Suite">Suite Executive</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-deep-navy pointer-events-none">expand_more</span>
+                </div>
+              </div>
+              <div class="w-full md:w-1/4 px-4 py-2 border-r-0 md:border-r border-surface-container-high flex flex-col gap-1">
+                <label class="font-label-md text-label-md text-text-muted uppercase">Climatisation</label>
+                <div class="relative">
+                  <select id="hero-filter-climatisation" class="w-full bg-transparent font-headline-md text-body-lg text-deep-navy appearance-none focus:outline-none cursor-pointer">
+                    <option value="all">Tous conforts</option>
+                    <option value="Climatisée">Climatisée</option>
+                    <option value="Ventilée">Ventilée</option>
+                  </select>
+                  <span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-deep-navy pointer-events-none">ac_unit</span>
+                </div>
+              </div>
+              <div class="w-full md:w-2/4 px-4 py-2 flex flex-col gap-1">
+                <label class="font-label-md text-label-md text-text-muted uppercase">Dates de séjour</label>
+                <div class="flex items-center gap-4">
+                  <div class="relative flex-1">
+                    <input id="hero-date-in" class="w-full bg-transparent font-headline-md text-body-lg text-deep-navy focus:outline-none cursor-pointer" type="date"/>
+                  </div>
+                  <span class="text-text-muted">-</span>
+                  <div class="relative flex-1">
+                    <input id="hero-date-out" class="w-full bg-transparent font-headline-md text-body-lg text-deep-navy focus:outline-none cursor-pointer" type="date"/>
+                  </div>
+                </div>
+              </div>
+              <button id="hero-search-btn" class="w-full md:w-auto mt-4 md:mt-0 bg-deep-navy text-on-primary font-headline-md text-body-lg px-10 py-4 rounded-lg hover:bg-primary-container transition-all shadow-md shrink-0 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">search</span>
+                <span>Rechercher</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-28"></div>
+
+        <!-- Featured Properties Section -->
+        <div class="py-section-gap px-gutter bg-surface">
+          <div class="max-w-container-max mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+              <div>
+                <h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Logements d'Exception</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Sélectionnez l'espace qui correspond à vos besoins à Lakota. Du studio intimiste à la suite familiale, chaque hébergement offre un standing irréprochable.</p>
+              </div>
+              <a class="inline-flex items-center gap-2 font-label-md text-label-md text-deep-navy hover:text-accent-gold transition-colors shrink-0" href="#nos-logements">
+                <span>Tous nos logements</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Grille dynamique des logements vedettes -->
+            <div id="featured-logements-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Injecté par app.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Choose Us / Features -->
+        <div class="py-section-gap px-gutter bg-surface-white relative overflow-hidden">
+          <div class="absolute -right-64 -top-64 w-[800px] h-[800px] bg-primary-fixed-dim/20 rounded-full blur-[100px] pointer-events-none"></div>
+          <div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1 relative">
+              <div class="grid grid-cols-2 gap-4">
+                <img class="w-full h-64 object-cover rounded-xl mt-8 shadow-lg" src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Confort Tek Hôtel"/>
+                <img class="w-full h-80 object-cover rounded-xl shadow-xl -mt-4" src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Sécurité Tek Hôtel"/>
+              </div>
+              <div class="absolute -bottom-8 -left-8 bg-surface-white p-6 rounded-xl shadow-[0_10px_30px_rgba(30,42,110,0.1)] flex items-center gap-4 border border-surface-container">
+                <div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-deep-navy text-3xl">verified</span>
+                </div>
+                <div>
+                  <div class="font-headline-lg text-[28px] text-deep-navy font-black">100%</div>
+                  <div class="font-label-md text-text-muted uppercase tracking-wider text-[12px]">Clients satisfaits</div>
+                </div>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2 space-y-8">
+              <div>
+                <span class="font-label-md text-label-md text-accent-gold uppercase tracking-widest mb-4 block">Notre Promesse</span>
+                <h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6 leading-tight">Le standard hôtelier,<br/>l'espace en plus.</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">Tek Hôtel redéfinit l'hébergement à Lakota en offrant des espaces de vie généreux, entièrement équipés, avec un service irréprochable dédié à votre confort et votre sécurité.</p>
+              </div>
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-deep-navy text-[24px]">verified_user</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-[18px] text-deep-navy mb-1">Sécurité Maximale</h4>
+                    <p class="font-body-md text-[15px] text-on-surface-variant">Accès sécurisé 24/7, gardiennage et serrures électroniques de pointe pour votre tranquillité d'esprit.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-deep-navy text-[24px]">room_service</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-[18px] text-deep-navy mb-1">Confort Premium & Mini-bar</h4>
+                    <p class="font-body-md text-[15px] text-on-surface-variant">Literie de qualité hôtelière, chambres climatisées ou ventilées, mini-bar et cuisines modernes.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-deep-navy text-[24px]">location_on</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-[18px] text-deep-navy mb-1">Emplacement Stratégique</h4>
+                    <p class="font-body-md text-[15px] text-on-surface-variant">Situé au Quartier Résidentiel de Lakota, offrant un accès facile aux commerces et administrations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="py-section-gap px-gutter bg-surface-container-low">
+          <div class="max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Ils ont séjourné chez nous</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Découvrez les retours de nos clients professionnels et particuliers.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <div class="md:col-span-8 bg-surface-white p-8 rounded-[16px] shadow-sm flex flex-col justify-between border border-surface-container">
+                <div>
+                  <div class="flex gap-1 mb-6 text-accent-gold">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-lg text-body-lg text-deep-navy italic mb-8">"Un séjour exceptionnel. La propreté des lieux et le niveau d'équipement sont dignes des grands standards internationaux. L'espace de travail dans le T2 m'a permis de rester productif tout au long de ma mission à Lakota. L'équipe est discrète mais incroyablement réactive."</p>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-headline-md text-[18px] text-deep-navy">KD</div>
+                  <div>
+                    <div class="font-label-md text-label-md text-deep-navy">Kouassi D.</div>
+                    <div class="font-body-md text-[14px] text-text-muted">Consultant en mission longue</div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-4 bg-deep-navy text-on-primary p-8 rounded-[16px] shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex gap-1 mb-6 text-accent-gold">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-surface-container-high" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-primary/90 mb-8">"Très belle surprise pour notre séjour familial. La suite est spacieuse et sécurisée. Le rapport qualité-prix est excellent pour la région."</p>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center font-headline-md text-[16px] text-surface-white">MF</div>
+                  <div>
+                    <div class="font-label-md text-[14px] text-surface-white">Marie F.</div>
+                    <div class="font-body-md text-[12px] text-surface-white/70">Séjour en famille</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="py-24 px-gutter relative">
+          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?auto=compress&cs=tinysrgb&w=1920&q=90')"></div>
+          <div class="absolute inset-0 bg-deep-navy/90 mix-blend-multiply"></div>
+          <div class="relative z-10 max-w-4xl mx-auto text-center text-on-primary flex flex-col items-center">
+            <h2 class="font-headline-lg text-headline-lg mb-6">Prêt à vivre l'expérience Tek Hôtel ?</h2>
+            <p class="font-body-lg text-body-lg text-surface-white/80 mb-10 max-w-2xl">Réservez dès maintenant votre appartement meublé et profitez de nos tarifs préférentiels pour les séjours de longue durée.</p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <a class="bg-accent-gold text-surface-white font-label-md text-label-md px-10 py-4 rounded-lg hover:bg-surface-white hover:text-deep-navy transition-all shadow-lg text-center" href="#nos-logements">
+                Réserver un séjour
+              </a>
+              <a class="bg-transparent border-2 border-surface-white text-surface-white font-label-md text-label-md px-10 py-4 rounded-lg hover:bg-surface-white/10 transition-all text-center" href="#contact">
+                Contacter le service client
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact-home-section" class="py-section-gap px-gutter bg-surface-white">
+          <div class="max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              <div>
+                <h2 class="font-headline-lg text-headline-lg text-deep-navy mb-2">Nous Contacter</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-10">Une question spécifique ou une demande pour un groupe ? Notre équipe vous répond sous 24h.</p>
+                <form id="home-contact-form" class="space-y-6">
+                  <input type="text" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                      <label class="font-label-md text-label-md text-text-muted">Nom complet</label>
+                      <input name="nom" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="Jean Dupont" type="text"/>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label class="font-label-md text-label-md text-text-muted">Téléphone</label>
+                      <input name="telephone" class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="079 808 10 10" type="tel"/>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-md text-label-md text-text-muted">Adresse Email</label>
+                    <input name="email" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="jean@exemple.com" type="email"/>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-md text-label-md text-text-muted">Message</label>
+                    <textarea name="message" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all resize-none" placeholder="Votre demande..." rows="4"></textarea>
+                  </div>
+                  <button class="w-full bg-deep-navy text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-md" type="submit">
+                    Envoyer le message
+                  </button>
+                </form>
+              </div>
+              <div class="flex flex-col">
+                <div class="w-full h-72 bg-surface-container rounded-xl overflow-hidden mb-6 shadow-inner border border-surface-container relative">
+                  <iframe 
+                    class="w-full h-full border-0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.965%2C5.350%2C-3.950%2C5.360&amp;layer=mapnik&amp;marker=5.3549615%2C-3.9574489" 
+                    title="Carte de localisation Tek Hôtel Lakota" 
+                    loading="lazy">
+                  </iframe>
+                  <div class="absolute bottom-2 right-2 bg-surface-white/90 backdrop-blur-sm px-2 py-1 rounded text-[11px] font-label-md text-deep-navy shadow">
+                    Lat: 5.35496 | Lon: -3.95745
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-headline-md text-[18px] text-deep-navy mb-3 flex items-center gap-2">
+                      <span class="material-symbols-outlined text-accent-gold">location_on</span>
+                      Adresse
+                    </h4>
+                    <p class="font-body-md text-on-surface-variant text-sm">Quartier Résidentiel,<br/>Lakota, Côte d'Ivoire</p>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-[18px] text-deep-navy mb-3 flex items-center gap-2">
+                      <span class="material-symbols-outlined text-accent-gold">support_agent</span>
+                      Contact Direct
+                    </h4>
+                    <p class="font-body-md text-on-surface-variant mb-1 text-sm">
+                      <a href="tel:+2250798081010" class="hover:text-primary font-semibold flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-xs">call</span> 079 808 10 10
+                      </a>
+                    </p>
+                    <p class="font-body-md text-on-surface-variant text-xs space-y-0.5 mt-1">
+                      <a href="mailto:tekhotellakota@gmail.com" class="block hover:underline truncate">tekhotellakota@gmail.com</a>
+                      <a href="mailto:agencetekimmobilier@gmail.com" class="block hover:underline text-text-muted truncate">agencetekimmobilier@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2 : NOS LOGEMENTS                  -->
+    <!-- ========================================== -->
+    <section id="section-nos-logements" class="spa-section">
+      <div class="max-w-container-max mx-auto px-gutter w-full py-section-gap flex flex-col lg:flex-row gap-12">
+        
+        <!-- Aside Filtres -->
+        <aside class="w-full lg:w-1/4 shrink-0 flex flex-col gap-8">
+          <div>
+            <h2 class="font-headline-md text-2xl font-bold text-on-surface mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">filter_list</span>
+              Filtres
+            </h2>
+            <div class="space-y-6">
+              
+              <!-- Filtre Climatisation / Confort thermique -->
+              <div class="bg-surface-container rounded-xl p-6 shadow-sm flex flex-col gap-4 border border-surface-container-high">
+                <h3 class="font-label-md text-sm uppercase tracking-wider text-on-surface-variant font-semibold flex items-center justify-between">
+                  <span>Confort Thermique</span>
+                  <span class="material-symbols-outlined text-primary text-base">mode_fan</span>
+                </h3>
+                <div class="flex flex-col gap-2.5">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="climate_filter" value="all" type="radio" checked class="w-4 h-4 text-primary focus:ring-primary"/>
+                    <span class="font-body-md text-sm text-on-surface group-hover:text-primary transition-colors">Tous les logements</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="climate_filter" value="Climatisée" type="radio" class="w-4 h-4 text-primary focus:ring-primary"/>
+                    <span class="font-body-md text-sm text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-xs text-primary">ac_unit</span> Climatisée
+                    </span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="climate_filter" value="Ventilée" type="radio" class="w-4 h-4 text-primary focus:ring-primary"/>
+                    <span class="font-body-md text-sm text-on-surface group-hover:text-primary transition-colors flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-xs text-accent-gold">mode_fan</span> Ventilée
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Filtre Type de logement -->
+              <div class="bg-surface-container rounded-xl p-6 shadow-sm flex flex-col gap-4">
+                <h3 class="font-label-md text-sm uppercase tracking-wider text-on-surface-variant font-semibold">Type de logement</h3>
+                <div class="space-y-3">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="type_filter" value="Studio" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Studio</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="type_filter" value="T2" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Appartement T2</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="type_filter" value="T3" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Appartement T3</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="type_filter" value="Suite" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Suite Executive</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Filtre Capacité -->
+              <div class="bg-surface-container rounded-xl p-6 shadow-sm flex flex-col gap-4">
+                <h3 class="font-label-md text-sm uppercase tracking-wider text-on-surface-variant font-semibold">Capacité</h3>
+                <div class="grid grid-cols-4 gap-2">
+                  <button data-capacity="all" class="capacity-btn active py-2 rounded-lg bg-deep-navy text-on-primary font-body-md text-sm shadow-md transition-all">Tous</button>
+                  <button data-capacity="2" class="capacity-btn py-2 rounded-lg bg-surface-white text-on-surface font-body-md text-sm hover:bg-surface-container-high transition-colors">1-2</button>
+                  <button data-capacity="4" class="capacity-btn py-2 rounded-lg bg-surface-white text-on-surface font-body-md text-sm hover:bg-surface-container-high transition-colors">3-4</button>
+                  <button data-capacity="5" class="capacity-btn py-2 rounded-lg bg-surface-white text-on-surface font-body-md text-sm hover:bg-surface-container-high transition-colors">5+</button>
+                </div>
+              </div>
+
+              <!-- Filtre Équipements -->
+              <div class="bg-surface-container rounded-xl p-6 shadow-sm flex flex-col gap-4">
+                <h3 class="font-label-md text-sm uppercase tracking-wider text-on-surface-variant font-semibold">Équipements</h3>
+                <div class="space-y-3">
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="amenity_filter" value="Mini-bar" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors font-medium text-deep-navy">Mini-bar</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="amenity_filter" value="Wifi" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Wi-Fi Gratuit</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="amenity_filter" value="Cuisine" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Cuisine équipée</span>
+                  </label>
+                  <label class="flex items-center gap-3 cursor-pointer group">
+                    <input name="amenity_filter" value="Parking" class="w-5 h-5 rounded border-on-surface-variant text-primary" type="checkbox"/>
+                    <span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Parking privé</span>
+                  </label>
+                </div>
+              </div>
+
+              <button id="reset-filters-btn" class="w-full py-3 bg-surface-container-high text-on-surface font-label-md text-sm uppercase tracking-wide rounded-xl hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-lg">restart_alt</span>
+                Réinitialiser
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Catalogue & Pagination -->
+        <div class="flex-1 flex flex-col">
+          <div class="flex justify-between items-end mb-8 pb-4 relative">
+            <div>
+              <h1 class="font-display-lg text-3xl md:text-5xl font-bold text-deep-navy mb-2">Nos Logements</h1>
+              <p class="font-body-md text-on-surface-variant text-lg">Découvrez nos chambres et suites climatisées et ventilées à Lakota.</p>
+            </div>
+            <div id="results-count" class="text-sm font-label-md text-text-muted">6 logements disponibles</div>
+            <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-primary/20 via-primary/5 to-transparent"></div>
+          </div>
+
+          <!-- Grille injectée dynamiquement -->
+          <div id="all-logements-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+            <!-- Injecté par app.js -->
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination-container" class="flex items-center justify-center mt-auto pb-8">
+            <!-- Injecté par app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3 : FICHE LOGEMENT DÉTAILLÉE       -->
+    <!-- ========================================== -->
+    <section id="section-fiche-logement" class="spa-section">
+      <div class="flex flex-col w-full pb-section-gap">
+        <div class="max-w-container-max mx-auto px-gutter w-full pt-6">
+          <a href="#nos-logements" class="inline-flex items-center gap-2 font-label-md text-deep-navy hover:text-accent-gold transition-colors mb-6">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            <span>Retour à tous les logements</span>
+          </a>
+        </div>
+        <div id="logement-detail-view" class="w-full">
+          <!-- Rendu dynamique complet via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4 : QUI SOMMES-NOUS                -->
+    <!-- ========================================== -->
+    <section id="section-qui-sommes-nous" class="spa-section">
+      <div class="flex flex-col w-full">
+        <div class="relative w-full overflow-hidden bg-surface-bright pb-32">
+          <div class="absolute inset-0 bg-gradient-to-b from-surface-variant/30 to-surface-bright pointer-events-none"></div>
+          <div class="max-w-container-max mx-auto px-gutter pt-20 lg:pt-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-6 space-y-8 relative z-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-white rounded-full shadow-sm text-primary font-label-md">
+                  <span class="material-symbols-outlined text-sm">spa</span>
+                  <span>Une oasis au cœur de Lakota</span>
+                </div>
+                <h1 class="font-display-lg-mobile lg:font-display-lg text-on-surface text-display-lg-mobile lg:text-display-lg leading-tight">
+                  L'élégance de <br/> <span class="text-primary italic">l'hospitalité ivoirienne</span>
+                </h1>
+                <p class="font-body-lg text-on-surface-variant text-body-lg max-w-xl">
+                  Tek Hôtel n'est pas seulement un lieu de séjour, c'est une expérience pensée pour allier le confort moderne aux traditions d'accueil chaleureuses de la région du Lôh-Djiboua.
+                </p>
+                <div class="pt-4 flex gap-6 items-center">
+                  <div class="flex -space-x-4">
+                    <img alt="Staff" class="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-surface-white" src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800&q=90"/>
+                    <img alt="Staff" class="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-surface-white" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&q=90"/>
+                  </div>
+                  <div class="font-body-md text-on-surface-variant text-sm">
+                    <span class="font-bold text-on-surface block">+20 professionnels</span>
+                    dédiés à votre confort
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-6 relative">
+                <div class="relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-xl transform lg:-translate-y-8 z-10">
+                  <img alt="Façade du Tek Hôtel" class="w-full h-full object-cover" src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600&q=90"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent"></div>
+                </div>
+                <div class="absolute bottom-12 -left-8 bg-surface-white p-6 rounded-xl shadow-lg z-20 max-w-[280px] border border-surface-container">
+                  <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-accent-gold text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <div>
+                      <h3 class="font-headline-md text-on-surface text-lg">Excellence</h3>
+                      <p class="font-body-md text-on-surface-variant text-sm mt-1">Reconnu pour notre qualité de service dans tout le Lôh-Djiboua.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-24 bg-surface-white relative">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="flex flex-col gap-4 p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-300 border border-surface-container">
+                <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+                  <span class="material-symbols-outlined text-3xl">home_work</span>
+                </div>
+                <h3 class="font-headline-md text-on-surface text-headline-md">Architecture Moderne</h3>
+                <p class="font-body-md text-on-surface-variant text-body-md">Des infrastructures récentes conçues pour offrir un cadre sécurisé, esthétique et fonctionnel à tous nos visiteurs.</p>
+              </div>
+              <div class="flex flex-col gap-4 p-8 rounded-2xl bg-deep-navy shadow-md transform md:-translate-y-4">
+                <div class="w-16 h-16 rounded-full bg-surface-white/10 flex items-center justify-center text-on-primary">
+                  <span class="material-symbols-outlined text-3xl">handshake</span>
+                </div>
+                <h3 class="font-headline-md text-on-primary text-headline-md">Accueil Authentique</h3>
+                <p class="font-body-md text-on-primary/80 text-body-md">La légendaire hospitalité ivoirienne se ressent dès vos premiers pas dans notre hall de réception.</p>
+              </div>
+              <div class="flex flex-col gap-4 p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-300 border border-surface-container">
+                <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+                  <span class="material-symbols-outlined text-3xl">eco</span>
+                </div>
+                <h3 class="font-headline-md text-on-surface text-headline-md">Engagement Local</h3>
+                <p class="font-body-md text-on-surface-variant text-body-md">Nous valorisons les talents locaux et contribuons au dynamisme économique de la ville de Lakota.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-32 bg-surface overflow-hidden">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+              <div class="max-w-2xl">
+                <h2 class="font-headline-lg text-on-surface text-headline-lg mb-4">Nos Espaces</h2>
+                <p class="font-body-lg text-on-surface-variant text-body-lg">Découvrez les différents lieux pensés pour votre détente et vos rencontres au sein de l'établissement.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[300px]">
+              <div class="lg:col-span-2 lg:row-span-2 rounded-2xl overflow-hidden relative group shadow-md">
+                <img alt="Hall de réception" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1600&q=90"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full">
+                  <span class="inline-block px-3 py-1 mb-3 text-xs font-label-md uppercase tracking-wider bg-surface-white/20 backdrop-blur-md text-on-primary rounded">L'Accueil</span>
+                  <h3 class="font-headline-lg text-on-primary text-2xl mb-2">Le Grand Hall</h3>
+                  <p class="font-body-md text-on-primary/80 line-clamp-2">Un espace majestueux pour vos rendez-vous d'affaires ou simplement pour vous détendre.</p>
+                </div>
+              </div>
+              <div class="rounded-2xl overflow-hidden relative group shadow-md">
+                <img alt="Patio extérieur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1600&q=90"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-6 w-full">
+                  <h3 class="font-headline-md text-on-primary text-xl mb-1">Le Patio Fleuri</h3>
+                  <p class="font-body-md text-on-primary/80 text-sm">Calme et verdure.</p>
+                </div>
+              </div>
+              <div class="rounded-2xl overflow-hidden relative group shadow-md bg-deep-navy p-8 flex flex-col justify-center items-center text-center">
+                <div class="w-16 h-16 mb-4 rounded-full bg-surface-white/10 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-3xl text-accent-gold">restaurant</span>
+                </div>
+                <h3 class="font-headline-md text-on-primary text-xl mb-2">Restauration</h3>
+                <p class="font-body-md text-on-primary/80 text-sm">Spécialités locales et rafraîchissements.</p>
+              </div>
+              <div class="lg:col-span-2 rounded-2xl overflow-hidden relative group shadow-md">
+                <img alt="Salle de conférence" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1600&q=90"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-6 w-full">
+                  <span class="inline-block px-3 py-1 mb-2 text-xs font-label-md uppercase tracking-wider bg-surface-white/20 backdrop-blur-md text-on-primary rounded">Business</span>
+                  <h3 class="font-headline-md text-on-primary text-xl mb-1">Salle de Réunions</h3>
+                  <p class="font-body-md text-on-primary/80 text-sm">Équipée pour vos séminaires et rendez-vous professionnels.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 5 : NOS SERVICES                   -->
+    <!-- ========================================== -->
+    <section id="section-nos-services" class="spa-section">
+      <div class="flex flex-col w-full">
+        <div class="w-full bg-surface py-section-gap relative overflow-hidden flex justify-center items-center">
+          <div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+            <p class="font-label-md text-label-md text-accent-gold uppercase tracking-wider mb-4">Prestations sur mesure</p>
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-deep-navy mb-6 max-w-3xl mx-auto">L'Excellence Hôtelière à Votre Service</h1>
+            <p class="font-body-lg text-body-lg text-text-muted max-w-2xl mx-auto">
+              Découvrez notre gamme complète de services conçus pour rendre votre séjour à Lakota inoubliable.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full bg-surface-container-low py-section-gap relative">
+          <div class="max-w-container-max mx-auto px-gutter relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              <!-- Service Card 1 -->
+              <div class="group bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row border border-surface-container">
+                <div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+                  <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Location courte durée"/>
+                </div>
+                <div class="w-full sm:w-3/5 p-8 flex flex-col justify-center bg-surface-white">
+                  <div class="w-12 h-12 bg-deep-navy/10 rounded-full flex items-center justify-center mb-6 text-deep-navy">
+                    <span class="material-symbols-outlined text-[28px]">calendar_month</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Location Courte Durée</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Profitez d'un confort optimal pour vos séjours professionnels ou touristiques. Prêt à vivre dès votre arrivée.
+                  </p>
+                  <a class="inline-flex items-center gap-2 font-label-md text-label-md text-deep-navy hover:text-accent-gold transition-colors" href="#nos-logements">
+                    <span>Voir les offres</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service Card 2 -->
+              <div class="group bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row border border-surface-container">
+                <div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden relative sm:order-2">
+                  <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Séjour longue durée"/>
+                </div>
+                <div class="w-full sm:w-3/5 p-8 flex flex-col justify-center bg-surface-white sm:order-1">
+                  <div class="w-12 h-12 bg-deep-navy/10 rounded-full flex items-center justify-center mb-6 text-deep-navy">
+                    <span class="material-symbols-outlined text-[28px]">home_work</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Séjour Longue Durée</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Bénéficiez de tarifs préférentiels et d'un accompagnement personnalisé pour vos résidences prolongées à Lakota.
+                  </p>
+                  <a class="inline-flex items-center gap-2 font-label-md text-label-md text-deep-navy hover:text-accent-gold transition-colors" href="#contact">
+                    <span>Nous contacter</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service Card 3 -->
+              <div class="group bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row border border-surface-container">
+                <div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+                  <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Ménage et entretien"/>
+                </div>
+                <div class="w-full sm:w-3/5 p-8 flex flex-col justify-center bg-surface-white">
+                  <div class="w-12 h-12 bg-deep-navy/10 rounded-full flex items-center justify-center mb-6 text-deep-navy">
+                    <span class="material-symbols-outlined text-[28px]">cleaning_services</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Entretien & Ménage</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Un service régulier et méticuleux, incluant le renouvellement du linge de maison pour un cadre toujours impeccable.
+                  </p>
+                  <span class="font-label-md text-sm text-accent-gold uppercase tracking-wider font-bold">Inclus dans tous nos séjours</span>
+                </div>
+              </div>
+
+              <!-- Service Card 4 -->
+              <div class="group bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col sm:flex-row border border-surface-container">
+                <div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden relative sm:order-2">
+                  <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.pexels.com/photos/3771110/pexels-photo-3771110.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Conciergerie"/>
+                </div>
+                <div class="w-full sm:w-3/5 p-8 flex flex-col justify-center bg-surface-white sm:order-1">
+                  <div class="w-12 h-12 bg-deep-navy/10 rounded-full flex items-center justify-center mb-6 text-deep-navy">
+                    <span class="material-symbols-outlined text-[28px]">room_service</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Conciergerie Privée</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Notre équipe est à votre écoute pour organiser vos transferts, réservations ou demandes spécifiques pendant votre séjour.
+                  </p>
+                  <a class="inline-flex items-center gap-2 font-label-md text-label-md text-deep-navy hover:text-accent-gold transition-colors" href="#contact">
+                    <span>Nous contacter</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 6 : CONTACT                        -->
+    <!-- ========================================== -->
+    <section id="section-contact" class="spa-section">
+      <div class="max-w-container-max mx-auto px-gutter py-section-gap">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <p class="font-label-md text-accent-gold uppercase tracking-wider mb-2">Restons en contact</p>
+          <h1 class="font-headline-lg text-headline-lg text-deep-navy">Contactez Tek Hôtel Lakota</h1>
+          <p class="font-body-md text-text-muted mt-2">Notre équipe de réception est disponible pour vous assister dans toutes vos réservations et demandes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Formulaire -->
+          <div class="bg-surface-white p-8 rounded-2xl shadow-sm border border-surface-container">
+            <form id="main-contact-form" class="space-y-6">
+              <input type="text" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-md text-label-md text-text-muted">Nom complet *</label>
+                  <input name="nom" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="Jean Kouassi" type="text"/>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-md text-label-md text-text-muted">Téléphone</label>
+                  <input name="telephone" class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="079 808 10 10" type="tel"/>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="font-label-md text-label-md text-text-muted">Adresse Email *</label>
+                <input name="email" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all" placeholder="jean@exemple.com" type="email"/>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="font-label-md text-label-md text-text-muted">Message *</label>
+                <textarea name="message" required class="w-full bg-surface border border-outline-variant rounded-lg p-4 font-body-md text-deep-navy focus:outline-none focus:border-deep-navy transition-all resize-none" placeholder="Bonjour, je souhaiterais réserver une chambre..." rows="4"></textarea>
+              </div>
+              <button class="w-full bg-deep-navy text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+                <span class="material-symbols-outlined text-[18px]">send</span>
+                <span>Envoyer le message</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Coordonnées & Carte -->
+          <div class="flex flex-col justify-between space-y-8">
+            <div class="bg-deep-navy text-on-primary p-8 rounded-2xl space-y-6 shadow-xl">
+              <h3 class="font-headline-md text-xl font-bold">Coordonnées Officielles</h3>
+              <div class="space-y-4 font-body-md text-sm text-surface-container-high">
+                <p class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-accent-gold">location_on</span>
+                  <span>Quartier Résidentiel, Lakota, Côte d'Ivoire</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-accent-gold">call</span>
+                  <a href="tel:+2250798081010" class="hover:text-surface-white font-bold text-base transition-colors">079 808 10 10</a>
+                </p>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-accent-gold mt-0.5">mail</span>
+                  <div class="flex flex-col space-y-1">
+                    <a href="mailto:tekhotellakota@gmail.com" class="hover:underline text-surface-white">tekhotellakota@gmail.com</a>
+                    <a href="mailto:agencetekimmobilier@gmail.com" class="hover:underline text-surface-container-high">agencetekimmobilier@gmail.com</a>
+                  </div>
+                </div>
+                <p class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-accent-gold">schedule</span>
+                  <span>Réception & Accueil 24h/24 — 7j/7</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Mini carte interactive OpenStreetMap -->
+            <div class="w-full h-64 bg-surface-container rounded-xl overflow-hidden shadow-sm border border-surface-container relative">
+              <iframe 
+                class="w-full h-full border-0" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-3.965%2C5.350%2C-3.950%2C5.360&amp;layer=mapnik&amp;marker=5.3549615%2C-3.9574489" 
+                title="Localisation Tek Hôtel" 
+                loading="lazy">
+              </iframe>
+              <a href="https://maps.google.com/?q=5.3549615,-3.9574489" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-surface-white/95 text-deep-navy font-label-md text-xs px-3 py-1.5 rounded shadow hover:bg-surface-container transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-xs">open_in_new</span>
+                <span>Ouvrir dans Google Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 7 : MENTIONS LÉGALES               -->
+    <!-- ========================================== -->
+    <section id="section-mentions-legales" class="spa-section">
+      <div class="flex flex-col w-full max-w-container-max mx-auto px-gutter py-section-gap space-y-12">
+        <div class="space-y-4">
+          <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-deep-navy">Mentions Légales</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Informations juridiques et conditions d'utilisation relatives au site web et aux services de Tek Hôtel Lakota.
+          </p>
+        </div>
+
+        <div class="bg-surface-white p-8 rounded-xl shadow-sm space-y-6 font-body-md text-body-md text-on-surface-variant border border-surface-container">
+          <div>
+            <h3 class="font-headline-md text-xl text-deep-navy mb-2">1. Éditeur du site</h3>
+            <p>Le présent site est édité par <strong>Tek Hôtel Lakota</strong>, établissement d'hébergement hôtelier et de résidences meublées situé à Lakota, Quartier Résidentiel, Côte d'Ivoire.</p>
+            <p class="mt-1">Téléphone : <strong>079 808 10 10</strong> | Emails : <strong>tekhotellakota@gmail.com</strong> / <strong>agencetekimmobilier@gmail.com</strong></p>
+          </div>
+
+          <div class="pt-4 border-t border-surface-container">
+            <h3 class="font-headline-md text-xl text-deep-navy mb-2">2. Hébergement & Données</h3>
+            <p>La base de données et les services d'authentification sont opérés sur des infrastructures cloud sécurisées avec protection des données personnelles.</p>
+          </div>
+
+          <div class="pt-4 border-t border-surface-container">
+            <h3 class="font-headline-md text-xl text-deep-navy mb-2">3. Propriété Intellectuelle</h3>
+            <p>Tous les éléments visuels, logos, textes et photographies présents sur ce site sont la propriété exclusive de Tek Hôtel Lakota.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 8 : 404                            -->
+    <!-- ========================================== -->
+    <section id="section-404" class="spa-section">
+      <div class="relative w-full flex flex-col items-center justify-center py-[100px] px-gutter overflow-hidden">
+        <div class="relative z-10 max-w-5xl w-full flex flex-col md:flex-row items-stretch bg-surface-white rounded-2xl shadow-2xl overflow-hidden border border-surface-container">
+          <div class="w-full md:w-5/12 relative min-h-[300px] md:min-h-[450px] overflow-hidden bg-surface-container">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/271631/pexels-photo-271631.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90')"></div>
+          </div>
+          <div class="w-full md:w-7/12 flex flex-col justify-center p-8 md:p-14 space-y-6 bg-surface-white">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-error-container text-on-error-container rounded-full text-xs font-bold uppercase tracking-wider w-fit">
+              <span>Erreur 404</span>
+            </div>
+            <h1 class="font-headline-lg text-headline-lg text-deep-navy">Oups ! Cette page s'est égarée.</h1>
+            <p class="font-body-md text-on-surface-variant">
+              Il semble que vous cherchiez une chambre ou une information qui n'existe plus ou a été déplacée.
+            </p>
+            <div class="pt-2">
+              <a class="inline-flex items-center gap-2 bg-deep-navy text-on-primary font-label-md px-8 py-3.5 rounded-lg shadow-md hover:bg-primary-container transition-all" href="#accueil">
+                <span class="material-symbols-outlined text-[18px]">home</span>
+                <span>Retour à l'accueil</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER OFFICIEL STITCH                     -->
+  <!-- ========================================== -->
+  <footer class="w-full bg-deep-navy text-on-primary py-section-gap">
+    <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-3">
+          <img alt="Logo Tek Hôtel" class="h-10 w-10 rounded-full object-cover border border-accent-gold/40" src="./WhatsApp Image 2026-08-15 at 09.59.55.jpeg"/>
+          <h4 class="font-headline-md text-on-primary">Tek Hôtel Lakota</h4>
+        </div>
+        <ul class="space-y-3 font-body-md opacity-90 text-sm">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-accent-gold text-base">location_on</span>
+            <span>Quartier Résidentiel, Lakota, Côte d'Ivoire</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-accent-gold text-base">call</span>
+            <a href="tel:+2250798081010" class="hover:underline font-bold">079 808 10 10</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-accent-gold text-base mt-0.5">mail</span>
+            <div class="flex flex-col">
+              <a href="mailto:tekhotellakota@gmail.com" class="hover:underline">tekhotellakota@gmail.com</a>
+              <a href="mailto:agencetekimmobilier@gmail.com" class="hover:underline opacity-80">agencetekimmobilier@gmail.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="space-y-6">
+        <h4 class="font-headline-md text-on-primary">Navigation</h4>
+        <ul class="space-y-3 font-body-md text-sm">
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#accueil">Accueil</a></li>
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#nos-logements">Nos logements</a></li>
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#qui-sommes-nous">Qui sommes-nous</a></li>
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#nos-services">Nos services</a></li>
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#contact">Contact</a></li>
+          <li class="opacity-80 hover:opacity-100 transition-opacity"><a href="#mentions-legales">Mentions légales</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-6">
+        <h4 class="font-headline-md text-on-primary">Newsletter</h4>
+        <p class="font-body-md opacity-80 text-sm">Restez informé de nos offres exclusives et actualités.</p>
+        <form id="footer-newsletter-form" class="flex gap-2">
+          <input type="text" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+          <input name="email" required class="bg-surface-white/10 border border-on-primary/20 rounded-lg px-4 py-2 flex-1 text-on-primary focus:outline-none focus:border-on-primary text-sm" placeholder="votre@email.com" type="email"/>
+          <button class="bg-surface-white text-deep-navy font-label-md px-6 py-2 rounded-lg hover:bg-surface-container-high transition-colors text-sm font-bold" type="submit">S'abonner</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="max-w-container-max mx-auto px-gutter mt-12 pt-8 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-60 font-body-md">
+      <p>© 2026 Tek Hôtel Lakota. Tous droits réservés.</p>
+      <div class="flex gap-6">
+        <a class="hover:underline" href="#mentions-legales">Confidentialité</a>
+        <a class="hover:underline" href="#mentions-legales">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Container Toasts -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
